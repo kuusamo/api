@@ -17,10 +17,14 @@ $client = ClientFactory::create('example-key', 'example-secret', 'http://kuusamo
 //$response = $client->post('/test', ['some' => 'body']);
 
 // user end-points
-$response = $client->post('/users', [
-    'email' => 'test@example.com',
-    'firstName' => 'Jane',
-    'surname' => 'Smith'
+// $response = $client->post('/users', [
+//     'email' => 'test@example.com',
+//     'firstName' => 'Jane',
+//     'surname' => 'Smith'
+// ]);
+
+$response = $client->post('/users/5/courses', [
+    'id' => 1
 ]);
 
 echo $response->getBody() . "\n";
