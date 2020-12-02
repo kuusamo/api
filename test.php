@@ -11,7 +11,16 @@ require_once 'vendor/autoload.php';
 use Kuusamo\Api\ClientFactory;
 
 $client = ClientFactory::create('example-key', 'example-secret', 'http://kuusamo/api');
-$response = $client->get('/test');
+
+// test end-points
+//$response = $client->get('/test');
 //$response = $client->post('/test', ['some' => 'body']);
+
+// user end-points
+$response = $client->post('/users', [
+    'email' => 'test@example.com',
+    'firstName' => 'Jane',
+    'surname' => 'Smith'
+]);
 
 echo $response->getBody() . "\n";
