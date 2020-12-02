@@ -37,6 +37,7 @@ class Client
 
         $factory = new Psr17Factory;
         $request = $factory->createRequest($method, $url);
+        $request = $request->withHeader('Content-Type', 'application/json');
         $request = $request->withHeader('Kuusamo-Key', $this->token->getKey());
         $request = $request->withHeader('Kuusamo-Version', '1.0');
         $request = $request->withHeader('Kuusamo-Timestamp', time());
