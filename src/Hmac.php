@@ -3,7 +3,7 @@
 namespace Kuusamo\Api;
 
 use Kuusamo\Api\Exception\VerificationException;
-use Nyholm\Psr7\Request;
+use Psr\Http\Message\RequestInterface as Request;
 
 class Hmac
 {
