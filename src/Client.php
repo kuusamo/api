@@ -4,7 +4,6 @@ namespace Kuusamo\Api;
 
 use Buzz\Client\FileGetContents;
 use Nyholm\Psr7\Factory\Psr17Factory;
-use Nyholm\Psr7\Response;
 
 class Client
 {
@@ -51,7 +50,8 @@ class Client
         $request = $hmac->signRequest($request);
 
         $client = new FileGetContents($factory);
-        return $client->sendRequest($request);
+        $response = $client->sendRequest($request);
+        return new Response($response);
     }
 
     /**
