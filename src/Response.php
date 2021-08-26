@@ -7,6 +7,7 @@ use Nyholm\Psr7\Response as PsrResponse;
 class Response
 {
     private $psrResponse;
+    private $jsonData;
 
     /**
      * Constructor.
@@ -25,6 +26,12 @@ class Response
      */
     public function getData()
     {
-        return json_decode($this->psrResponse->getBody()->getContents());
+        if ($this->jsonData === null) {
+            $this->jsonData = json_decode(
+                $this->psrResponse->getBody()->getContents()
+            );
+        }
+
+        return $this->jsonData;
     }
 }
