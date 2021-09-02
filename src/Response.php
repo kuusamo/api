@@ -34,4 +34,14 @@ class Response
 
         return $this->jsonData;
     }
+
+    /**
+     * Get the status code.
+     *
+     * @return int Status code.
+     */
+    public function getStatusCode(): int
+    {
+        return $this->psrResponse->getStatusCode();
+    }
 }
