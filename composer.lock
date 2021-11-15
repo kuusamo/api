@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6c1549401281c44d5c7fef6184463261",
+    "content-hash": "008f2b433af3924e88957fe0eec0c084",
     "packages": [
         {
             "name": "kriswallsmith/buzz",
@@ -2995,7 +2995,7 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=7.2.0"
+        "php": ">=7.3.0"
     },
     "platform-dev": [],
     "plugin-api-version": "2.0.0"
