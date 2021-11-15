@@ -1,6 +1,10 @@
 Changelog
 =========
 
+2.1.1
+-----
+* Upgrading testing frameworks
+
 2.1
 ---
 * `Response` now has a `getStatusCode` method

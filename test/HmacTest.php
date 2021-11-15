@@ -8,7 +8,7 @@ use DG\BypassFinals;
 
 class HmacTest extends TestCase
 {
-    public function setUp()
+    public function setUp(): void
     {
         BypassFinals::enable();
     }
@@ -33,7 +33,7 @@ class HmacTest extends TestCase
             '1.0',
             'test-key',
             '1.0',
-            1262304000,
+            '1262304000',
             '5f67542c540e00d58da4ea6f664c6f9dadb9cef93287b76f440f4afe8883549b'
         ));
 

@@ -13,11 +13,10 @@ class ResponseExceptionTest extends TestCase
         $this->assertSame('Invalid hash', $exception->getMessage());
     }
 
-    /**
-     * @expectedException Kuusamo\Api\Exception\ResponseException
-     */
     public function testThrow()
     {
+        $this->expectException(ResponseException::class);
+
         throw new ResponseException;
     }
 }

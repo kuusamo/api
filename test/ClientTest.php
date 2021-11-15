@@ -3,6 +3,7 @@
 namespace Kuusamo\Api\Test;
 
 use Kuusamo\Api\Client;
+use Kuusamo\Api\Exception\ResponseException;
 use PHPUnit\Framework\TestCase;
 
 class ClientTest extends TestCase
@@ -31,11 +32,10 @@ class ClientTest extends TestCase
         $this->assertSame(200, $response->getStatusCode());
     }
 
-    /**
-     * @expectedException Kuusamo\Api\Exception\ResponseException
-     */
     public function testError()
     {
+        $this->expectException(ResponseException::class);
+
         $requestMock = $this->createMock('Nyholm\Psr7\Request');
 
         $streamMock = $this->createMock('Nyholm\Psr7\Stream');

@@ -13,11 +13,10 @@ class VertificationExceptionTest extends TestCase
         $this->assertSame('Invalid hash', $exception->getMessage());
     }
 
-    /**
-     * @expectedException Kuusamo\Api\Exception\VerificationException
-     */
     public function testThrow()
     {
+        $this->expectException(VerificationException::class);
+
         throw new VerificationException;
     }
 }
