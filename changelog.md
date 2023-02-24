@@ -1,6 +1,11 @@
 Changelog
 =========
 
+2.2
+---
+
+* Better handling of 500 responses
+
 2.1.1
 -----
 * Upgrading testing frameworks

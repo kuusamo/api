@@ -23,8 +23,11 @@ $client = ClientFactory::create('example-key', 'example-secret', 'http://kuusamo
 //     'surname' => 'Smith'
 // ]);
 
-$response = $client->post('/users/5/courses', [
-    'id' => 1
-]);
+// $response = $client->post('/users/5/courses', [
+//     'id' => 1
+// ]);
 
-echo $response->getBody() . "\n";
+//$response = $client->get('/users/5/courses');
+
+//echo $response->getRaw() . "\n";
+echo json_encode($response->getData()) . "\n";

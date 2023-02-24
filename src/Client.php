@@ -79,6 +79,10 @@ class Client
         $networkResponse = $client->sendRequest($request);
         $response = new Response($networkResponse);
 
+        if ($response->getStatusCode() >= 500) {
+            throw new ResponseException($response->getRaw());
+        }
+
         if ($response->getStatusCode() >= 400) {
             throw new ResponseException($response->getData()->message);
         }

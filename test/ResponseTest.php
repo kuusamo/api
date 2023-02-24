@@ -19,6 +19,7 @@ class ResponseTest extends TestCase
         $response = new Response($responseMock);
 
         $this->assertSame(['hello', 'world'], $response->getData());
+        $this->assertSame('["hello","world"]', $response->getRaw());
         $this->assertSame(200, $response->getStatusCode());
     }
 }

@@ -36,6 +36,16 @@ class Response
     }
 
     /**
+     * Get a raw response.
+     *
+     * @return string
+     */
+    public function getRaw()
+    {
+        return $this->psrResponse->getBody()->getContents();
+    }
+
+    /**
      * Get the status code.
      *
      * @return int Status code.
