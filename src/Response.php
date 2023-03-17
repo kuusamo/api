@@ -8,6 +8,7 @@ class Response
 {
     private $psrResponse;
     private $jsonData;
+    private $jsonArray;
 
     /**
      * Constructor.
@@ -33,6 +34,23 @@ class Response
         }
 
         return $this->jsonData;
+    }
+
+    /**
+     * Get JSON data as associative array.
+     *
+     * @return array
+     */
+    public function getArray()
+    {
+        if ($this->jsonArray === null) {
+            $this->jsonArray = json_decode(
+                $this->psrResponse->getBody()->getContents(),
+                true
+            );
+        }
+
+        return $this->jsonArray;
     }
 
     /**

@@ -1,6 +1,11 @@
 Changelog
 =========
 
+2.3
+---
+
+* Option to get JSON data as an associative array
+
 2.2
 ---
 
